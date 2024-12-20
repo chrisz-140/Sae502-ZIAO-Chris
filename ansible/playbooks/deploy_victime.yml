@@ -1,0 +1,17 @@
+- name: Configure machine victime
+  hosts: victime
+  tasks:
+    - name: Install required packages
+      ansible.builtin.apt:
+        name:
+          - iputils-ping
+          - iproute2
+          - apache2
+          - openssh-server
+        state: present
+        update_cache: yes
+    - name: Ensure SSH is running
+      ansible.builtin.service:
+        name: ssh
+        state: started
+        enabled: true

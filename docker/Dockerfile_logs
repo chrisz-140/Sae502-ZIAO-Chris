@@ -1,0 +1,14 @@
+FROM nginx:latest
+
+# Installer les outils requis
+RUN apt-get update && apt-get install -y \
+    iputils-ping iproute2 apache2 python3 openssh-server && \
+    apt-get clean
+
+# Configurer SSH
+RUN echo "root:root" | chpasswd
+RUN mkdir -p /var/run/sshd
+
+EXPOSE 22
+
+CMD ["/usr/sbin/sshd", "-D"]

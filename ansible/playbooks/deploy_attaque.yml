@@ -1,0 +1,16 @@
+- name: Configure machine attaque
+  hosts: attaque
+  tasks:
+    - name: Install required packages
+      ansible.builtin.apt:
+        name:
+          - nmap
+          - hydra
+          - openssh-server
+        state: present
+        update_cache: yes
+    - name: Ensure SSH is running
+      ansible.builtin.service:
+        name: ssh
+        state: started
+        enabled: true

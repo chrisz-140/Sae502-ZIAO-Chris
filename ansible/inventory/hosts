@@ -1,0 +1,8 @@
+[attaque]
+attaque ansible_host=127.0.0.1 ansible_port=2222 ansible_user=root ansible_password=root
+
+[logs]
+logs ansible_host=127.0.0.1 ansible_port=2223 ansible_user=root ansible_password=root
+
+[victime]
+victime ansible_host=127.0.0.1 ansible_port=2224 ansible_user=root ansible_password=root
