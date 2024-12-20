@@ -1,5 +1,0 @@
-- name: Setup Kali Linux tools
-  hosts: kali
-  become: true
-  roles:
-    - role: kali

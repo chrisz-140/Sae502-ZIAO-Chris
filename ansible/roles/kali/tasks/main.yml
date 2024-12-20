@@ -1,9 +1,0 @@
-- name: Ensure attack tools are installed
-  become: true
-  apt:
-    name: "{{ item }}"
-    state: present
-  loop:
-    - nmap
-    - metasploit-framework
-    - hydra
