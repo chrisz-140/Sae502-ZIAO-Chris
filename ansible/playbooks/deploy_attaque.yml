@@ -1,4 +1,4 @@
-- name: Configure machine attaque
+- name: Configurer machine attaque
   hosts: attaque
   tasks:
     - name: Install required packages
