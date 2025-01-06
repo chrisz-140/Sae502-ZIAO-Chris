@@ -11,7 +11,6 @@ ATTENTION : la machine logs n’est pas fonctionnel donc on ne pourra que faire
 
 Voici la structure des fichiers et répertoires principaux :
 
-projet-simulation-cyberattaques/
 ├── ansible
 │   ├── ansible.cfg
 │   ├── inventory
@@ -53,7 +52,6 @@ projet-simulation-cyberattaques/
 ├── scripts
 │   └── setup_network.sh
 └── wordlist.txt
-
 -----
 **3. Étapes d'utilisation**
 
