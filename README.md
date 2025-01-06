@@ -28,29 +28,53 @@ projet-simulation-cyberattaques/
 │   │   ├── deploy\_logs.yml
 
 │   │   ├── deploy\_victime.yml
+
 │   │   └── site.yml
+
 │   └── roles
+
 │       ├── attaque
+
 │       │   ├── tasks
+
 │       │   │   └── main.yml
+
 │       │   ├── templates
+
 │       │   └── vars
+
 │       │       └── main.yml
+
 │       ├── logs
+
 │       │   ├── tasks
+
 │       │   │   └── main.yml
+
 │       │   ├── templates
+
 │       │   └── vars
+
 │       │       └── main.yml
+
 │       └── victime
+
 │           ├── tasks
+
 │           │   └── main.yml
+
 │           ├── templates
+
 │           └── vars
+
 │               └── main.yml
+
 ├── docker
+
 │   ├── docker-compose.yml
+
 │   ├── Dockerfile\_attaque
+
 │   ├── Dockerfile\_logs
 
 │   └── Dockerfile\_victime
