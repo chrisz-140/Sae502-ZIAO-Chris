@@ -12,9 +12,9 @@ ATTENTION : la machine logs n’est pas fonctionnel donc on ne pourra que faire
 Voici la structure des fichiers et répertoires principaux :
 
 ├── ansible
-│   ├── ansible.cfg
-│   ├── inventory
-│   │   └── hosts
+│    ansible.cfg
+│    inventory
+│   │    hosts
 │   ├── playbooks
 │   │   ├── deploy_attaque.yml
 │   │   ├── deploy_logs.yml
