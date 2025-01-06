@@ -11,14 +11,23 @@ ATTENTION : la machine logs n’est pas fonctionnel donc on ne pourra que faire
 
 Voici la structure des fichiers et répertoires principaux :
 
+projet-simulation-cyberattaques/
+
 ├── ansible
-│    ansible.cfg
-│    inventory
-│   │    hosts
+
+│   ├── ansible.cfg
+
+│   ├── inventory
+
+│   │   └── hosts
+
 │   ├── playbooks
-│   │   ├── deploy_attaque.yml
-│   │   ├── deploy_logs.yml
-│   │   ├── deploy_victime.yml
+
+│   │   ├── deploy\_attaque.yml
+
+│   │   ├── deploy\_logs.yml
+
+│   │   ├── deploy\_victime.yml
 │   │   └── site.yml
 │   └── roles
 │       ├── attaque
@@ -41,16 +50,25 @@ Voici la structure des fichiers et répertoires principaux :
 │               └── main.yml
 ├── docker
 │   ├── docker-compose.yml
-│   ├── Dockerfile_attaque
-│   ├── Dockerfile_logs
-│   └── Dockerfile_victime
+│   ├── Dockerfile\_attaque
+│   ├── Dockerfile\_logs
+
+│   └── Dockerfile\_victime
+
 ├── interface.py
+
 ├── README.md
+
 ├── requirements.yml
+
 ├── Sae502-ZIAO-Chris
+
 │   └── README.md
+
 ├── scripts
-│   └── setup_network.sh
+
+│   └── setup\_network.sh
+
 └── wordlist.txt
 -----
 **3. Étapes d'utilisation**
