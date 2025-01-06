@@ -111,6 +111,7 @@ Avant de commencer, assurez-vous que :
 Dans votre projet, si vous avez des fichiers Dockerfile pour chaque conteneur, vous devez d'abord construire les images Docker. Utilisez les commandes suivantes :
 
 cd docker
+
 docker build -t docker\_attaque .
 
 docker build -t docker\_victime .
@@ -133,6 +134,8 @@ Ansible est utilisé pour automatiser la configuration et le déploiement. Exéc
 1. **Lancez le playbook principal pour déployer les conteneurs :**
 
    cd ansible
+
+
    ansible-playbook -i inventory/hosts playbooks/site.yml
 
    Cette commande :
@@ -211,14 +214,23 @@ Cette commande démarre tous les conteneurs définis dans docker-compose.yml en 
 
     ansible\_python\_interpreter=/usr/bin/python3
 
-**5.3 Erreur : Problème lors du push Git**
+**5.3 Erreur : SSH Refusé ou Non Fonctionnel**
 
-- **Message :** Updates were rejected because the remote contains work that you do not have locally.
-- **Solution :**
-  - Synchroniser les modifications avec git pull origin main --rebase.
-  - Ensuite, effectuer le push :
+- **Problème** : Les conteneurs refusent les connexions SSH.
+- **Solution** :
+  - Vérifiez que le service SSH est actif dans chaque conteneur :
 
-    git push origin main
+    docker exec -it <container\_name> service ssh status
+
+  - Assurez-vous que les lignes suivantes sont décommentées dans /etc/ssh/sshd\_config :
+
+    PermitRootLogin yes
+
+    PasswordAuthentication yes
+
+  - Redémarrez le service SSH :
+
+    docker exec -it <container\_name> service ssh restart
 
 **5.4 Erreur : Le scan Nmap ne retourne rien**
 
