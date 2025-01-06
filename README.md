@@ -12,8 +12,48 @@ ATTENTION : la machine logs n’est pas fonctionnel donc on ne pourra que faire
 Voici la structure des fichiers et répertoires principaux :
 
 projet-simulation-cyberattaques/
+├── ansible
+│   ├── ansible.cfg
+│   ├── inventory
+│   │   └── hosts
+│   ├── playbooks
+│   │   ├── deploy_attaque.yml
+│   │   ├── deploy_logs.yml
+│   │   ├── deploy_victime.yml
+│   │   └── site.yml
+│   └── roles
+│       ├── attaque
+│       │   ├── tasks
+│       │   │   └── main.yml
+│       │   ├── templates
+│       │   └── vars
+│       │       └── main.yml
+│       ├── logs
+│       │   ├── tasks
+│       │   │   └── main.yml
+│       │   ├── templates
+│       │   └── vars
+│       │       └── main.yml
+│       └── victime
+│           ├── tasks
+│           │   └── main.yml
+│           ├── templates
+│           └── vars
+│               └── main.yml
+├── docker
+│   ├── docker-compose.yml
+│   ├── Dockerfile_attaque
+│   ├── Dockerfile_logs
+│   └── Dockerfile_victime
+├── interface.py
+├── README.md
+├── requirements.yml
+├── Sae502-ZIAO-Chris
+│   └── README.md
+├── scripts
+│   └── setup_network.sh
+└── wordlist.txt
 
-projet-simulation-cyberattaques/ ├── ansible │ ├── ansible.cfg │ ├── inventory │ │ └── hosts │ ├── playbooks │ │ ├── deploy_attaque.yml │ │ ├── deploy_logs.yml │ │ ├── deploy_victime.yml │ │ └── site.yml │ └── roles │ ├── attaque │ │ ├── tasks │ │ │ └── main.yml │ │ ├── templates │ │ └── vars │ │ └── main.yml │ ├── logs │ │ ├── tasks │ │ │ └── main.yml │ │ ├── templates │ │ └── vars │ │ └── main.yml │ └── victime │ ├── tasks │ │ └── main.yml │ ├── templates │ └── vars │ └── main.yml ├── docker │ ├── docker-compose.yml │ ├── Dockerfile_attaque │ ├── Dockerfile_logs │ └── Dockerfile_victime ├── interface.py ├── README.md ├── requirements.yml ├── Sae502-ZIAO-Chris │ └── README.md ├── scripts │ └── setup_network.sh └── wordlist.txt
 -----
 **3. Étapes d'utilisation**
 
